@@ -1,3 +1,5 @@
+# application.yml for git backend
+
 server:
     port: 8888
     servlet:
@@ -5,9 +7,10 @@ server:
 
 spring:
     profiles:
-        active: native
+        active: local
     cloud:
         config:
             server:
-                native:
-                    searchLocations: classpath:/configs-file
+                git:
+                    uri: https://github.com/nihalmurmu/config-repo
+                    basedir: target/config

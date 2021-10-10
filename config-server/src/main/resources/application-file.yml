@@ -1,0 +1,15 @@
+# application.yml for file system backend
+
+server:
+    port: 8888
+    servlet:
+        context-path: /config-server
+
+spring:
+    profiles:
+        active: native
+    cloud:
+        config:
+            server:
+                native:
+                    searchLocations: classpath:/configs-file
